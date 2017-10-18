@@ -89,7 +89,10 @@
 	}
 	else if ([key isEqualToString:@"locations"]) {
 		result = [self do_open:[prefix stringByAppendingString:@"root=Privacy&path=LOCATION"]];
-	}
+    }
+    else if ([key isEqualToString:@"locations_ios11"]) {
+        result = [self do_open:[prefix stringByAppendingString:@"root=Privacy&path=LOCATION_SERVICES"]];
+    }
 	else if ([key isEqualToString:@"network"]) {
 		result = [self do_open:[prefix stringByAppendingString:@"root=General&path=Network"]];
 	}
